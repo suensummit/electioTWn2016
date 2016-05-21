@@ -87,11 +87,9 @@ tail(resMtx2)
 
 ## 文字雲
 
-```{r, eval=FALSE}
+```{r, eval=TRUE}
 par(family='Heiti TC Light') # MAC only
-pal <- brewer.pal(9,"BuGn")
 pal <- brewer.pal(9,"Paired")
-pal <- pal[-(1:4)]
 wordcloud(resMtx2$resSeg, resMtx2$Freq, min.freq = 5, colors=pal)
 ```
 

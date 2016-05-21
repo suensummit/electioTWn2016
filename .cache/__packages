@@ -1,0 +1,13 @@
+base
+httr
+xml2
+rvest
+jsonlite
+ggplot2
+jiebaRD
+jiebaR
+dplyr
+RColorBrewer
+wordcloud
+devtools
+slidify
