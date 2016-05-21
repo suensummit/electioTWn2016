@@ -72,7 +72,7 @@ length(resSeg)
 ## 篩掉 stopping words，計算詞頻
 
 ```{r}
-stopwords <- c("的", "是", "了", "跟", "與")
+stopwords <- c("的", "是", "了", "跟", "與", "在")
 resSeg <- filter_segment(resSeg, stopwords)
 resMtx <- table(resSeg)
 tail(resMtx)
@@ -89,7 +89,10 @@ tail(resMtx2)
 
 ```{r, eval=FALSE}
 par(family='Heiti TC Light') # MAC only
-wordcloud(resMtx2$resSeg2, resMtx2$Freq, min.freq = 5)
+pal <- brewer.pal(9,"BuGn")
+pal <- brewer.pal(9,"Paired")
+pal <- pal[-(1:4)]
+wordcloud(resMtx2$resSeg, resMtx2$Freq, min.freq = 5, colors=pal)
 ```
 
 <div style="width:80%;">
